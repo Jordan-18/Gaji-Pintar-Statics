@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaji Pintar</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="issets/css/main.css">
+    <link rel="shortcut icon" href="issets/img/logo.png">
+</head>
+<body>
+    <nav class="navbar navbar-warning bg-warning">
+        <a class="navbar-brand" href="#">
+          <img src="issets/img/logo.png" width="30" height="30" alt="" loading="lazy">
+        </a>
+      </nav>
+<div class="container mt-3">
+    <form action="" method="get" id="form">
+        <div class="form-group">
+            <label for="gaji">Gaji</label>
+            <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">Rp.</div>
+                </div>
+            <input type="text" class="form-control" id="gaji" placeholder="Biaya Gaji Bulan ini" value="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="op1">Potongan Invest</label>
+            <select class="form-control" id="op1">
+              <option value="">Masukan Pilihan</option>
+              <option value="10">10%</option>
+              <option value="20">20%</option>
+              <option value="30">30%</option>
+              <option value="40">40%</option>
+            </select>
+          </div>
+          <button id="jumlah" type="button" name="jumlah" class="btn btn-success float-right mb-3">Mulai</button>
+          <button id="baru" type="button" name="jumlah" class="btn btn-danger float-right mb-3 mr-1">Baru</button>
+    </form>
+
+    <table class="table">
+        <thead>
+            <th>Gaji</th>
+            <th>Potongan Invest</th>
+            <th>Yang Harus di Invest</th>
+        </thead>
+        <tbody>
+            <td id="g1"></td>
+            <td id="p1"></td>
+            <td id="in"></td>
+        </tbody>
+    </table>
+
+    
+</div>
+</body>
+</html>
+<!-- JS, Popper.js, and jQuery -->
+<script>
+    const inpgaji = document.getElementById("gaji")
+    const inpop1 = document.getElementById("op1")
+    const inpjumlah = document.getElementById
+    ("jumlah")
+    const inpg1 = document.getElementById("g1")
+    const inpp1 = document.getElementById("p1")
+    const inpin = document.getElementById("in")
+    const inpbaru = document.getElementById("baru")  
+
+    inpjumlah.onclick = function(){
+        const key = inpgaji.value;
+        const value = inpop1.value;
+
+        console.log(key);
+        console.log(value);
+
+        if (key && value){
+            localStorage.setItem(key,value);
+            // location.reload();
+        }
+
+        for(let i = 0; i < localStorage.length; i++){
+            const key = localStorage.key(i);
+            const value = localStorage.getItem(key);
+
+            inpg1.innerHTML = key;
+            inpp1.innerHTML = value;
+            inpin.innerHTML = key * value /100; 
+        }}
+
+    inpbaru.onclick = function(){
+        localStorage.clear();
+        location.reload();
+        return confirm('Yakin ?');
+    }
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
