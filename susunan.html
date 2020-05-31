@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaji Pintar</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="issets/css/main.css">
+    <link rel="shortcut icon" href="issets/img/logo.png">
+
+    <script>
+        window.onload = function () {
+    
+    var options = {
+        title: {
+            text: "Tatanan Invest & Tabungan Ideals"
+        },
+        subtitles: [{
+            text: "As of Maret, 2020"
+        }],
+        animationEnabled: true,
+        data: [{
+            type: "pie",
+            startAngle: 40,
+            toolTipContent: "<b>{label}</b>: {y}%",
+            showInLegend: "true",
+            legendText: "{label}",
+            indexLabelFontSize: 16,
+            indexLabel: "{label} - {y}%",
+            dataPoints: [
+                { y: 10, label: "investasi" },
+                { y: 20, label: "Dana Darurat" },
+                { y: 30, label: "Tabungan" },
+                { y: 40, label: "Kebutuhan Sehari-hari" }
+            ]
+        }]
+    };
+    $("#chartContainer").CanvasJSChart(options);
+    
+    }
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand navbar-warning bg-warning ">
+        <a class="navbar-brand" href="index.html">
+          <img src="issets/img/logo.png" width="30" height="30" alt="" loading="lazy" class="d-inline-block align-top">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link active" href="index.html" style="color: snow;">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link" href="about.html" style="color:snow;">Susunan</a>
+              <a class="nav-item nav-link" href="about.html" style="color:snow;">About Us</a>
+            </div>
+          </div>
+      </nav>
+<div class="container mt-3">
+    <!-- start chart -->
+    <div id="chartContainer" style="height: 370px; max-width: 920px; margin: 0px auto;"></div>
+    <!-- end chart -->
+
+    <!-- start card to video -->
+
+    <div class="card mb-3" style="max-width: 540px;" id="ca1">
+        <h5 class="gal">Tata Penabungan Ala Orang Terkaya</h5>
+        <div class="row no-gutters">
+            <div class=" embed-responsive embed-responsive-16by9" onclick="myfunction()">
+                <iframe class="embed-responsive-item" id="vid" src="issets/video/01.mp4" allowfullscreen ></iframe>
+              </div>
+              <small>Copy-Right<a href="https://www.instagram.com/mudacumasekali/?hl=id" target="blank"> @mudacumasekali</a></small>
+        </div>
+      </div>
+      <div class="card mb-3" style="max-width: 540px;">
+        <h5 class="gal">Standart Tata Cara Penabungan</h5>
+        <div class="row no-gutters">
+            <div class="embed-responsive embed-responsive-16by9" >
+                <iframe class="embed-responsive-item" src="issets/video/02.mp4" allowfullscreen></iframe>
+              </div>
+              <small>Copy-Right<a href="https://www.instagram.com/mudacumasekali/?hl=id" target="blank"> @mudacumasekali</a></small>
+        </div>
+      </div>
+    <!-- end card to video-->
+</div>
+
+</body>
+</html>
+<script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+<script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+<!-- <script type="text/javascript" src="issets/js/main.js"></script>
+<script src="issets/js/script.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script> -->
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->

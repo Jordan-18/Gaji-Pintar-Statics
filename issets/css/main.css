@@ -3,5 +3,12 @@
     max-width: 480px;
     width: 100%;
 }
-
+.la th
+{
+    font-size: 16px;
+}
+.gal 
+{
+    text-align: center;
+}
 
