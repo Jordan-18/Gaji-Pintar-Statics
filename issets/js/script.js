@@ -23,12 +23,6 @@ function getdata()
     document.getElementById('gaji2').value = formatRupiah(opgaji); 
 }
 
-    //mulai format rupiah gaji2
-
-
-
-    //selesai format rupiah gaji2
-
 // selesai pengambilan nilai
 
 
